@@ -1,0 +1,104 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Soulless Tree</title>
+		<link>/art/</link>
+		<description>Recent content in Art on Soulless Tree</description>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>en-us</language>
+		<lastBuildDate>Sat, 03 Sep 2022 00:00:00 +0000</lastBuildDate>
+		
+		<atom:link href="/art/index.xml" rel="self" type="application/rss+xml" />
+		
+		
+		<item>
+			<title>Landscape #1</title>
+			<link>/art/landscape-1/</link>
+			<pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate>
+			
+			<guid>/art/landscape-1/</guid>
+			<description>&lt;p&gt;&lt;a href=&#34;/art/landscape-1.jpg&#34;&gt;&lt;img src=&#34;/art/landscape-1.jpg&#34; alt=&#34;Landscape #1&#34; title=&#34;Landscape #1&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+		</item>
+		
+		<item>
+			<title>Untitled Portrait #2</title>
+			<link>/art/untitled-portrait-2/</link>
+			<pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
+			
+			<guid>/art/untitled-portrait-2/</guid>
+			<description>&lt;p&gt;&lt;a href=&#34;/art/untitled-portrait-2.png&#34;&gt;&lt;img src=&#34;/art/untitled-portrait-2.png&#34; alt=&#34;Untitled Portrait #2&#34; title=&#34;Untitled Portrait #2&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+		</item>
+		
+		<item>
+			<title>Rasputin</title>
+			<link>/art/rasputin/</link>
+			<pubDate>Thu, 09 Jun 2022 00:00:00 +0000</pubDate>
+			
+			<guid>/art/rasputin/</guid>
+			<description>&lt;p&gt;&lt;a href=&#34;/art/rasputin.png&#34;&gt;&lt;img src=&#34;/art/rasputin.png&#34; alt=&#34;Rasputin&#34; title=&#34;Rasputin&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+		</item>
+		
+		<item>
+			<title>New Brushes</title>
+			<link>/art/new-brushes/</link>
+			<pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate>
+			
+			<guid>/art/new-brushes/</guid>
+			<description>&lt;p&gt;&lt;a href=&#34;/art/new-brushes.jpg&#34;&gt;&lt;img src=&#34;/art/new-brushes.jpg&#34; alt=&#34;New Brushes&#34; title=&#34;New Brushes&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+		</item>
+		
+		<item>
+			<title>Untitled Portrait #1</title>
+			<link>/art/untitled-portrait-1/</link>
+			<pubDate>Wed, 20 Apr 2022 00:00:00 +0000</pubDate>
+			
+			<guid>/art/untitled-portrait-1/</guid>
+			<description>&lt;p&gt;&lt;a href=&#34;/art/untitled-portrait-1.png&#34;&gt;&lt;img src=&#34;/art/untitled-portrait-1.png&#34; alt=&#34;Untitled Portrait #1&#34; title=&#34;Untitled Portrait #1&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+		</item>
+		
+		<item>
+			<title>In Red</title>
+			<link>/art/in-red/</link>
+			<pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
+			
+			<guid>/art/in-red/</guid>
+			<description>&lt;p&gt;&lt;a href=&#34;/art/in-red.png&#34;&gt;&lt;img src=&#34;/art/in-red.png&#34; alt=&#34;In Red&#34; title=&#34;In Red&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+		</item>
+		
+		<item>
+			<title>Link</title>
+			<link>/art/link/</link>
+			<pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate>
+			
+			<guid>/art/link/</guid>
+			<description>&lt;p&gt;&lt;a href=&#34;/art/link.png&#34;&gt;&lt;img src=&#34;/art/link.png&#34; alt=&#34;Link&#34; title=&#34;Link&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+		</item>
+		
+		<item>
+			<title>Her</title>
+			<link>/art/her/</link>
+			<pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate>
+			
+			<guid>/art/her/</guid>
+			<description>&lt;p&gt;&lt;a href=&#34;/art/her.png&#34;&gt;&lt;img src=&#34;/art/her.png&#34; alt=&#34;Her&#34; title=&#34;Her&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+		</item>
+		
+		<item>
+			<title>Return to Tradition</title>
+			<link>/art/return-to-tradition/</link>
+			<pubDate>Wed, 10 Mar 2021 00:00:00 +0000</pubDate>
+			
+			<guid>/art/return-to-tradition/</guid>
+			<description>&lt;p&gt;&lt;a href=&#34;/art/return-to-tradition.png&#34;&gt;&lt;img src=&#34;/art/return-to-tradition.png&#34; alt=&#34;Return to Tradition&#34; title=&#34;Return to Tradition&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+		</item>
+		
+	</channel>
+</rss>

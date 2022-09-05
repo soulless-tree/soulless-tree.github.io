@@ -1,0 +1,63 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Soulless Tree</title>
+		<link>/</link>
+		<description>Recent content on Soulless Tree</description>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>en-us</language>
+		<lastBuildDate>Sat, 03 Sep 2022 00:00:00 +0000</lastBuildDate>
+		
+		<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+		
+		
+		<item>
+			<title>Art</title>
+			<link>/art/</link>
+			<pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate>
+			
+			<guid>/art/</guid>
+			<description></description>
+		</item>
+		
+		<item>
+			<title>Posts</title>
+			<link>/posts/</link>
+			<pubDate>Sat, 16 Jul 2022 23:50:54 -0400</pubDate>
+			
+			<guid>/posts/</guid>
+			<description></description>
+		</item>
+		
+		<item>
+			<title>Writings</title>
+			<link>/writings/</link>
+			<pubDate>Sat, 16 Jul 2022 23:36:23 -0400</pubDate>
+			
+			<guid>/writings/</guid>
+			<description></description>
+		</item>
+		
+		<item>
+			<title>VG</title>
+			<link>/vg/</link>
+			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+			
+			<guid>/vg/</guid>
+			<description>&lt;p&gt;Coming soon!&lt;/p&gt;
+</description>
+		</item>
+		
+		<item>
+			<title>About</title>
+			<link>/about/</link>
+			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+			
+			<guid>/about/</guid>
+			<description>&lt;center&gt;
+Rewriting this to something less cringe
+&lt;/center&gt;
+</description>
+		</item>
+		
+	</channel>
+</rss>
