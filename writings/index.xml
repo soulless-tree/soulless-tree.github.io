@@ -28,9 +28,9 @@
 &lt;li&gt;Etiam eget nisl nisl.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/center&gt;
-&lt;p style=&#34;text-indent:initial;&#34;&gt;Aenean condimentum, lorem eget ultricies volutpat, metus elit vehicula risus, ac porttitor diam leo eget risus. Nam in ligula id leo tempor posuere. In ac dapibus libero. Sed vulputate, orci sit amet rutrum placerat, ante tellus condimentum lectus ac viverra ipsum tortor non libero. Morbi hendrerit lorem tellus, vel viverra purus posuere vel.&lt;/p&gt;
+&lt;p style=&#34;text-indent:initial;&#34;&gt;Aenean condimentum, lorem eget ultricies volutpat, metus elit vehicula risus, ac porttitor diam leo eget risus. Nam in ligula id leo tempor posuere. In ac dapibus libero. Sed vulputate, orci sit amet rutrum placerat, ante tellus condimentum lectus ac viverra ipsum tortor non libero. Morbi hendrerit lorem tellus, vel viverra purus posuere vel.
 &lt;p&gt;&lt;img src=&#34;/writings/1.jpg&#34; alt=&#34;Alexey Kondakov&#34;&gt;
-Fusce non dictum sapien, sed scelerisque turpis. Donec egestas lacus eget mi tristique faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec tincidunt dui sed rhoncus posuere. Donec dictum ipsum sed tincidunt pharetra. Nulla facilisi. Nulla facilisi. Quisque quis sapien malesuada, viverra nisi id, viverra felis. Nunc posuere velit ac dolor mollis vestibulum. Cras viverra convallis ipsum, ac consectetur lectus bibendum id. Quisque dignissim fringilla lacus, quis mattis massa auctor id&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+Fusce non dictum sapien, sed scelerisque turpis. Donec egestas lacus eget mi tristique faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec tincidunt dui sed rhoncus posuere. Donec dictum ipsum sed tincidunt pharetra. Nulla facilisi. Nulla facilisi. Quisque quis sapien malesuada, viverra nisi id, viverra felis. Nunc posuere velit ac dolor mollis vestibulum. Cras viverra convallis ipsum, ac consectetur lectus bibendum id. Quisque dignissim fringilla lacus, quis mattis massa auctor id&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div&gt;
 &lt;h1 id=&#34;ii&#34;&gt;II&lt;/h1&gt;
@@ -66,20 +66,21 @@ Fusce non dictum sapien, sed scelerisque turpis. Donec egestas lacus eget mi tri
 ⣿⣿⣿⣿⣿⣿⡜⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢸⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⣿⣿⣿⣿⣿⠃⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣸⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⣿⣿⣿⣿⣿⡀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⣿⣿⣿⣿⣿⣿⣿⣿&lt;/pre&gt;
-&lt;figcaption&gt;Donec varius ut velit vel rhoncus. Praesent vitae lectus eu libero pretium condimentum ac in metus.&lt;/figcaption&gt;
+&lt;figcaption&gt;Fig. 1. Donec varius ut velit vel rhoncus. Praesent vitae lectus eu libero pretium condimentum ac in metus.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
 &lt;div&gt;
 &lt;h1 id=&#34;iii&#34;&gt;III&lt;/h1&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla malesuada quis eros sit amet accumsan. Aliquam vel finibus ipsum. Integer sagittis, mauris non dapibus suscipit, quam est mattis arcu, a hendrerit ante lectus quis dolor. Mauris dolor turpis, malesuada sed tempor in, tincidunt at dui. Donec a porta libero. Fusce congue pretium sollicitudin. Nunc tincidunt turpis a suscipit maximus. Ut et diam ac metus vestibulum egestas nec sit amet orci. Ut vulputate massa at tortor facilisis lobortis.&lt;/p&gt;
 &lt;p&gt;Cras convallis facilisis ante, in gravida lectus maximus non. Pellentesque vel felis et est dictum fringilla. Proin odio sem, fringilla non nulla vitae, posuere viverra libero. Quisque tincidunt iaculis orci, rhoncus auctor enim hendrerit sed. Cras vitae nunc ligula. Pellentesque aliquam tortor elit, a rhoncus orci ultricies in. Aenean at ornare lacus.&lt;/p&gt;
-&lt;p style=&#34;text-indent:initial;&#34;&gt;Curabitur semper eros risus, nec blandit metus cursus non. Phasellus et mattis lacus, quis rhoncus ligula. Fusce non arcu laoreet, volutpat tortor ullamcorper, tristique felis. Aliquam hendrerit mattis lorem ut vehicula. Duis est velit, vestibulum at justo vel, gravida fermentum sem. Vestibulum a leo malesuada, commodo justo eu, varius ante. Suspendisse malesuada erat ac mauris suscipit malesuada. Proin elementum arcu turpis. Suspendisse sit amet rutrum leo. Phasellus quam leo, lobortis eget vehicula non, efficitur quis purus. Donec non malesuada tortor, et convallis erat.&lt;/p&gt;
+&lt;p&gt;Curabitur semper eros risus, nec blandit metus cursus non. Phasellus et mattis lacus, quis rhoncus ligula. Fusce non arcu laoreet, volutpat tortor ullamcorper, tristique felis. Aliquam hendrerit mattis lorem ut vehicula. Duis est velit, vestibulum at justo vel, gravida fermentum sem. Vestibulum a leo malesuada, commodo justo eu, varius ante. Suspendisse malesuada erat ac mauris suscipit malesuada. Proin elementum arcu turpis. Suspendisse sit amet rutrum leo. Phasellus quam leo, lobortis eget vehicula non, efficitur quis purus. Donec non malesuada tortor, et convallis erat:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Praesent pellentesque condimentum arcu ac cursus. Etiam viverra sapien sed tellus iaculis facilisis.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p style=&#34;text-indent:initial;&#34;&gt;
-Pellentesque iaculis interdum erat, at elementum mi rhoncus eget. Morbi at convallis ex, at pulvinar dui. Donec finibus posuere augue, nec ullamcorper nisl volutpat et. Maecenas vitae consectetur nibh. Cras et dapibus metus. Fusce varius, neque ac bibendum venenatis, risus elit malesuada dui, sed fermentum est ex sit amet arcu. In tincidunt tempor ex tempor lacinia. In lacinia convallis dolor eu varius. Proin dapibus ornare est, at tempor erat venenatis eu. Vivamus nec molestie lorem. Donec eget ante non arcu commodo sollicitudin. Fusce mattis nibh ut molestie tincidunt.
-&lt;/p&gt;
+&lt;p style=&#34;text-indent:initial;&#34;&gt;Pellentesque iaculis interdum erat, at elementum mi rhoncus eget. Morbi at convallis ex, at pulvinar dui. Donec finibus posuere augue, nec ullamcorper nisl volutpat et. Maecenas vitae consectetur nibh. Cras et dapibus metus. Fusce varius, neque ac bibendum venenatis, risus elit malesuada dui, sed fermentum est ex sit amet arcu. In tincidunt tempor ex tempor lacinia. In lacinia convallis dolor eu varius. Proin dapibus ornare est, at tempor erat venenatis eu. Vivamus nec molestie lorem. Donec eget ante non arcu commodo sollicitudin. Fusce mattis nibh ut molestie tincidunt.&lt;/p&gt;
+&lt;div class=&#34;video-container&#34;&gt;
+&lt;iframe width=&#34;584&#34; height=&#34;438&#34; src=&#34;https://www.youtube.com/embed/Dgga0_UcHfA&#34; controls=0 title=&#34;Aliquam Tortor Elit&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;/div&gt;

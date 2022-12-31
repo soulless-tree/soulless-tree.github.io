@@ -26,21 +26,83 @@
 	<header>
 		<h1 id="tag_Art">Art</h1> 
 		<em>« Pattern recognition in reverse. »</em>
-		<p>🍂</p>
+		<p>
+		<button class="emoji" id="prev">⬅️</button>
+		<button id="next">➡️</button>
+		</p>
 	</header>
+	<div id="gallerySelected">
+	</div>
+	<div id="galleryPreview">
+		<p><a href="/art/landscape-1.jpg"><img src="/art/landscape-1.webp" alt="Landscape #1" title="Landscape #1"></a></p>
 
-	<center>
-		<ul>
-			<li><a href="/art/landscape-1/">Landscape #1</a> (<time datetime="2022-09-03T00:00:00Z">03/09/2022</time>)</li>
-			<li><a href="/art/untitled-portrait-2/">Untitled Portrait #2</a> (<time datetime="2022-06-15T00:00:00Z">15/06/2022</time>)</li>
-			<li><a href="/art/rasputin/">Rasputin</a> (<time datetime="2022-06-09T00:00:00Z">09/06/2022</time>)</li>
-			<li><a href="/art/new-brushes/">New Brushes</a> (<time datetime="2022-06-03T00:00:00Z">03/06/2022</time>)</li>
-			<li><a href="/art/untitled-portrait-1/">Untitled Portrait #1</a> (<time datetime="2022-04-20T00:00:00Z">20/04/2022</time>)</li>
-			<li><a href="/art/in-red/">In Red</a> (<time datetime="2022-01-13T00:00:00Z">13/01/2022</time>)</li>
-			<li><a href="/art/link/">Link</a> (<time datetime="2021-12-07T00:00:00Z">07/12/2021</time>)</li>
-			<li><a href="/art/her/">Her</a> (<time datetime="2021-11-30T00:00:00Z">30/11/2021</time>)</li>
-			<li><a href="/art/return-to-tradition/">Return to Tradition</a> (<time datetime="2021-03-10T00:00:00Z">10/03/2021</time>)</li></ul>
-	</center>
+		
+		<p><a href="/art/untitled-portrait-2.png"><img src="/art/untitled-portrait-2.webp" alt="Untitled Portrait #2" title="Untitled Portrait #2"></a></p>
+
+		
+		<p><a href="/art/rasputin.png"><img src="/art/rasputin.webp" alt="Rasputin" title="Rasputin"></a></p>
+
+		
+		<p><a href="/art/new-brushes.jpg"><img src="/art/new-brushes.webp" alt="New Brushes" title="New Brushes"></a></p>
+
+		
+		<p><a href="/art/untitled-portrait-1.png"><img src="/art/untitled-portrait-1.webp" alt="Untitled Portrait #1" title="Untitled Portrait #1"></a></p>
+
+		
+		<p><a href="/art/in-red.png"><img src="/art/in-red.webp" alt="In Red" title="In Red"></a></p>
+
+		
+		<p><a href="/art/link.png"><img src="/art/link.webp" alt="Link" title="Link"></a></p>
+
+		
+		<p><a href="/art/her.png"><img src="/art/her.webp" alt="Her" title="Her"></a></p>
+
+		
+		<p><a href="/art/return-to-tradition.png"><img src="/art/return-to-tradition.webp" alt="Return to Tradition" title="Return to Tradition"></a></p>
+
+		</div>
+	<script>
+		
+		const images = document.querySelectorAll('img');
+
+  		const galleryPreview = document.querySelector('#galleryPreview');
+  		const gallerySelected = document.querySelector('#gallerySelected');
+
+		
+		const imageArray = Array.from(images);
+		const numImages = imageArray.length;
+		let currentIndex = 0;
+
+		
+		const prevButton = document.querySelector('#prev');
+		const nextButton = document.querySelector('#next');
+
+		
+		prevButton.addEventListener('click', () => {
+		  
+		  currentIndex = (currentIndex - 1 + numImages) % numImages;
+		  updateGallery();
+		});
+
+		nextButton.addEventListener('click', () => {
+		  
+		  currentIndex = (currentIndex + 1 + numImages) % numImages;
+		  updateGallery();
+		});
+
+		
+		function updateGallery() {
+		  images.forEach(image => image.remove());
+		  for (let i = 0; i < 3; i++) {
+		    galleryPreview.appendChild(imageArray[(currentIndex + i) % numImages]);
+		  }
+		  gallerySelected.removeChild(gallerySelected.lastChild);
+		  const copiedElement = imageArray[currentIndex].cloneNode(true);
+		  gallerySelected.appendChild(copiedElement);
+		}
+
+		updateGallery();
+	</script>
 </main>	</body>
 </html>
 
