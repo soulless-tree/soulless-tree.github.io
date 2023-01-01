@@ -27,51 +27,46 @@
 		<h1 id="tag_Art">Art</h1> 
 		<em>« Pattern recognition in reverse. »</em>
 		<p>
-		<button class="emoji" id="prev">⬅️</button>
+		<button id="prev">⬅️</button>
 		<button id="next">➡️</button>
 		</p>
 	</header>
-	<div id="gallerySelected">
+
+	<div class="gallery">
+	<div class="gallery-selected">
+		<a id="gallerySelectedLink" href="" target="_blank">
+		<img id="gallerySelected" src="">
+		</a>
 	</div>
-	<div id="galleryPreview">
-		<p><a href="/art/landscape-1.jpg"><img src="/art/landscape-1.webp" alt="Landscape #1" title="Landscape #1"></a></p>
+	<div class="gallery-title">
+		<p id="galleryTitle"></p>
+		<p id="galleryDate"></p>
+		<em id="galleryDescription"></em>
+	</div>
+	</div>
 
-		
-		<p><a href="/art/untitled-portrait-2.png"><img src="/art/untitled-portrait-2.webp" alt="Untitled Portrait #2" title="Untitled Portrait #2"></a></p>
+	<div class="gallery-preview">
+		<img id="galleryPreview" src="">
+		<img id="galleryPreview" src="">
+		<img id="galleryPreview" src="">
+	</div>
 
-		
-		<p><a href="/art/rasputin.png"><img src="/art/rasputin.webp" alt="Rasputin" title="Rasputin"></a></p>
-
-		
-		<p><a href="/art/new-brushes.jpg"><img src="/art/new-brushes.webp" alt="New Brushes" title="New Brushes"></a></p>
-
-		
-		<p><a href="/art/untitled-portrait-1.png"><img src="/art/untitled-portrait-1.webp" alt="Untitled Portrait #1" title="Untitled Portrait #1"></a></p>
-
-		
-		<p><a href="/art/in-red.png"><img src="/art/in-red.webp" alt="In Red" title="In Red"></a></p>
-
-		
-		<p><a href="/art/link.png"><img src="/art/link.webp" alt="Link" title="Link"></a></p>
-
-		
-		<p><a href="/art/her.png"><img src="/art/her.webp" alt="Her" title="Her"></a></p>
-
-		
-		<p><a href="/art/return-to-tradition.png"><img src="/art/return-to-tradition.webp" alt="Return to Tradition" title="Return to Tradition"></a></p>
-
-		</div>
 	<script>
-		
-		const images = document.querySelectorAll('img');
-
-  		const galleryPreview = document.querySelector('#galleryPreview');
-  		const gallerySelected = document.querySelector('#gallerySelected');
-
-		
-		const imageArray = Array.from(images);
-		const numImages = imageArray.length;
 		let currentIndex = 0;
+		const galleryPreview = document.querySelectorAll("#galleryPreview");
+		const gallerySelected = document.querySelector('#gallerySelected');
+		const gallerySelectedLink = document.querySelector('#gallerySelectedLink');
+		const galleryTitle = document.querySelector('#galleryTitle');
+		const galleryDescription = document.querySelector('#galleryDescription');
+		const galleryDate = document.querySelector('#galleryDate');
+
+		const imageList = ["\/art\/landscape-1.webp","\/art\/untitled-portrait-2.webp","\/art\/rasputin.webp","\/art\/new-brushes.webp","\/art\/untitled-portrait-1.webp","\/art\/in-red.webp","\/art\/link.webp","\/art\/her.webp","\/art\/return-to-tradition.webp",]; 
+		const imageLinkList = ["\/art\/landscape-1.jpg","\/art\/untitled-portrait-2.png","\/art\/rasputin.png","\/art\/new-brushes.jpg","\/art\/untitled-portrait-1.png","\/art\/in-red.png","\/art\/link.png","\/art\/her.png","\/art\/return-to-tradition.png",]; 
+		const imageTitles = ["Landscape #1","Untitled Portrait #2","Rasputin","New Brushes","Untitled Portrait #1","In Red","Link","Her","Return to Tradition",];
+		const imageDescriptions= ["« First attempt at drawing landscapes. »","« Portrait study. »","« Portrait study. »","« Study. »","« Portrait study. »","« Lilium on repeat. »","« From BOTW. »","« ... »","« . »",];
+		const imageDates = ["(03\/09\/2022)","(15\/06\/2022)","(09\/06\/2022)","(03\/06\/2022)","(20\/04\/2022)","(13\/01\/2022)","(07\/12\/2021)","(30\/11\/2021)","(10\/03\/2021)",];
+
+		const numImages = imageList.length;
 
 		
 		const prevButton = document.querySelector('#prev');
@@ -92,13 +87,14 @@
 
 		
 		function updateGallery() {
-		  images.forEach(image => image.remove());
 		  for (let i = 0; i < 3; i++) {
-		    galleryPreview.appendChild(imageArray[(currentIndex + i) % numImages]);
+			  galleryPreview[i].src = imageList[(currentIndex + i) % numImages];
 		  }
-		  gallerySelected.removeChild(gallerySelected.lastChild);
-		  const copiedElement = imageArray[currentIndex].cloneNode(true);
-		  gallerySelected.appendChild(copiedElement);
+		  gallerySelected.src = imageList[currentIndex];
+		  gallerySelectedLink.href= imageLinkList[currentIndex];
+		  galleryTitle.textContent = imageTitles[currentIndex]
+		  galleryDate.textContent = imageDates[currentIndex]
+		  galleryDescription.textContent = imageDescriptions[currentIndex]
 		}
 
 		updateGallery();
