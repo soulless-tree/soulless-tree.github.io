@@ -46,40 +46,45 @@
 	</div>
 
 	<div class="gallery-preview">
-		<img id="galleryPreview" src="">
-		<img id="galleryPreview" src="">
-		<img id="galleryPreview" src="">
+		<img id="galleryPreview1" src="">
+		<img id="galleryPreview2" src="">
+		<img id="galleryPreview3" src="">
 	</div>
 
 	<script>
-		let currentIndex = 0;
-		const galleryPreview = document.querySelectorAll("#galleryPreview");
-		const gallerySelected = document.querySelector('#gallerySelected');
-		const gallerySelectedLink = document.querySelector('#gallerySelectedLink');
-		const galleryTitle = document.querySelector('#galleryTitle');
-		const galleryDescription = document.querySelector('#galleryDescription');
-		const galleryDate = document.querySelector('#galleryDate');
-
+		
 		const imageList = ["\/art\/landscape-1.webp","\/art\/untitled-portrait-2.webp","\/art\/rasputin.webp","\/art\/new-brushes.webp","\/art\/untitled-portrait-1.webp","\/art\/in-red.webp","\/art\/link.webp","\/art\/her.webp","\/art\/return-to-tradition.webp",]; 
 		const imageLinkList = ["\/art\/landscape-1.jpg","\/art\/untitled-portrait-2.png","\/art\/rasputin.png","\/art\/new-brushes.jpg","\/art\/untitled-portrait-1.png","\/art\/in-red.png","\/art\/link.png","\/art\/her.png","\/art\/return-to-tradition.png",]; 
 		const imageTitles = ["Landscape #1","Untitled Portrait #2","Rasputin","New Brushes","Untitled Portrait #1","In Red","Link","Her","Return to Tradition",];
 		const imageDescriptions= ["« First attempt at drawing landscapes. »","« Portrait study. »","« Portrait study. »","« Study. »","« Portrait study. »","« Lilium on repeat. »","« From BOTW. »","« ... »","« . »",];
 		const imageDates = ["(03\/09\/2022)","(15\/06\/2022)","(09\/06\/2022)","(03\/06\/2022)","(20\/04\/2022)","(13\/01\/2022)","(07\/12\/2021)","(30\/11\/2021)","(10\/03\/2021)",];
 
+		
+		let currentIndex = 0;
 		const numImages = imageList.length;
 
 		
-		const prevButton = document.querySelector('#prev');
-		const nextButton = document.querySelector('#next');
+		const galleryPreview1 = document.getElementById("galleryPreview1");
+		const galleryPreview2 = document.getElementById("galleryPreview2");
+		const galleryPreview3 = document.getElementById("galleryPreview3");
+		const gallerySelected = document.getElementById("gallerySelected");
+		const gallerySelectedLink = document.getElementById("gallerySelectedLink");
+		const galleryTitle = document.getElementById("galleryTitle");
+		const galleryDescription = document.getElementById("galleryDescription");
+		const galleryDate = document.getElementById("galleryDate");
 
 		
-		prevButton.addEventListener('click', () => {
+		const prevButton = document.getElementById("prev");
+		const nextButton = document.getElementById("next");
+
+		
+		prevButton.addEventListener("click", () => {
 		  
 		  currentIndex = (currentIndex - 1 + numImages) % numImages;
 		  updateGallery();
 		});
 
-		nextButton.addEventListener('click', () => {
+		nextButton.addEventListener("click", () => {
 		  
 		  currentIndex = (currentIndex + 1 + numImages) % numImages;
 		  updateGallery();
@@ -87,14 +92,27 @@
 
 		
 		function updateGallery() {
-		  for (let i = 0; i < 3; i++) {
-			  galleryPreview[i].src = imageList[(currentIndex + i) % numImages];
-		  }
+		  
+		  galleryPreview1.src = imageList[(currentIndex + 0) % numImages];
+		  galleryPreview2.src = imageList[(currentIndex + 1) % numImages];
+		  galleryPreview3.src = imageList[(currentIndex + 2) % numImages];
+		  
+
+		  
 		  gallerySelected.src = imageList[currentIndex];
-		  gallerySelectedLink.href= imageLinkList[currentIndex];
-		  galleryTitle.textContent = imageTitles[currentIndex]
-		  galleryDate.textContent = imageDates[currentIndex]
-		  galleryDescription.textContent = imageDescriptions[currentIndex]
+		  gallerySelectedLink.href = imageLinkList[currentIndex];
+		  galleryTitle.textContent = imageTitles[currentIndex];
+		  galleryDate.textContent = imageDates[currentIndex];
+		  galleryDescription.textContent = imageDescriptions[currentIndex];
+		}
+
+		
+		imageList.forEach(preloadImage);
+
+		
+		function preloadImage(imageSrc) {
+		  const img = new Image();
+		  img.src = imageSrc;
 		}
 
 		updateGallery();
