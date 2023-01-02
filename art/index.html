@@ -53,14 +53,71 @@
 
 	<script>
 		
-		const imageList = ["\/art\/landscape-1.webp","\/art\/untitled-portrait-2.webp","\/art\/rasputin.webp","\/art\/new-brushes.webp","\/art\/untitled-portrait-1.webp","\/art\/in-red.webp","\/art\/link.webp","\/art\/her.webp","\/art\/return-to-tradition.webp",]; 
-		const imageLinkList = ["\/art\/landscape-1.jpg","\/art\/untitled-portrait-2.png","\/art\/rasputin.png","\/art\/new-brushes.jpg","\/art\/untitled-portrait-1.png","\/art\/in-red.png","\/art\/link.png","\/art\/her.png","\/art\/return-to-tradition.png",]; 
-		const imageTitles = ["Landscape #1","Untitled Portrait #2","Rasputin","New Brushes","Untitled Portrait #1","In Red","Link","Her","Return to Tradition",];
-		const imageDescriptions= ["« First attempt at drawing landscapes. »","« Portrait study. »","« Portrait study. »","« Study. »","« Portrait study. »","« Lilium on repeat. »","« From BOTW. »","« ... »","« . »",];
-		const imageDates = ["(03\/09\/2022)","(15\/06\/2022)","(09\/06\/2022)","(03\/06\/2022)","(20\/04\/2022)","(13\/01\/2022)","(07\/12\/2021)","(30\/11\/2021)","(10\/03\/2021)",];
+		const imageList = [
+			{src: "\/art\/landscape-1.webp",    
+			link: "\/art\/landscape-1.jpg",    
+			title: "Landscape #1",    
+			description: "« First attempt at drawing landscapes. »",    
+			date: "(03\/09\/2022)"},  
+			
+			{src: "\/art\/untitled-portrait-2.webp",    
+			link: "\/art\/untitled-portrait-2.png",    
+			title: "Untitled Portrait #2",    
+			description: "« Portrait study. »",    
+			date: "(15\/06\/2022)"},  
+			
+			{src: "\/art\/rasputin.webp",    
+			link: "\/art\/rasputin.png",    
+			title: "Rasputin",    
+			description: "« Portrait study. »",    
+			date: "(09\/06\/2022)"},  
+			
+			{src: "\/art\/new-brushes.webp",    
+			link: "\/art\/new-brushes.jpg",    
+			title: "New Brushes",    
+			description: "« Study. »",    
+			date: "(03\/06\/2022)"},  
+			
+			{src: "\/art\/untitled-portrait-1.webp",    
+			link: "\/art\/untitled-portrait-1.png",    
+			title: "Untitled Portrait #1",    
+			description: "« Portrait study. »",    
+			date: "(20\/04\/2022)"},  
+			
+			{src: "\/art\/in-red.webp",    
+			link: "\/art\/in-red.png",    
+			title: "In Red",    
+			description: "« Lilium on repeat. »",    
+			date: "(13\/01\/2022)"},  
+			
+			{src: "\/art\/link.webp",    
+			link: "\/art\/link.png",    
+			title: "Link",    
+			description: "« From BOTW. »",    
+			date: "(07\/12\/2021)"},  
+			
+			{src: "\/art\/her.webp",    
+			link: "\/art\/her.png",    
+			title: "Her",    
+			description: "« ... »",    
+			date: "(30\/11\/2021)"},  
+			
+			{src: "\/art\/return-to-tradition.webp",    
+			link: "\/art\/return-to-tradition.png",    
+			title: "Return to Tradition",    
+			description: "« . »",    
+			date: "(10\/03\/2021)"},  
+			];
+
+		const imageSrcs = imageList.map(image => image.src);
+		const imageLinks = imageList.map(image => image.link);
+		const imageTitles = imageList.map(image => image.title);
+		const imageDescriptions = imageList.map(image => image.description);
+		const imageDates = imageList.map(image => image.date);
 
 		
 		let currentIndex = 0;
+		let imageObjects = [];
 		const numImages = imageList.length;
 
 		
@@ -79,42 +136,43 @@
 
 		
 		prevButton.addEventListener("click", () => {
-		  
-		  currentIndex = (currentIndex - 1 + numImages) % numImages;
-		  updateGallery();
+			
+			currentIndex = (currentIndex - 1 + numImages) % numImages;
+			updateGallery();
 		});
 
 		nextButton.addEventListener("click", () => {
-		  
-		  currentIndex = (currentIndex + 1 + numImages) % numImages;
-		  updateGallery();
+			
+			currentIndex = (currentIndex + 1 + numImages) % numImages;
+			updateGallery();
 		});
 
 		
+		function preloadImages() {
+			for (let i = 0; i < numImages; i++) {
+				let imageObject = new Image();
+				imageObject.src = imageSrcs[i];
+				imageObjects.push(imageObject);
+			}
+		}
+
+		
 		function updateGallery() {
-		  
-		  galleryPreview1.src = imageList[(currentIndex + 0) % numImages];
-		  galleryPreview2.src = imageList[(currentIndex + 1) % numImages];
-		  galleryPreview3.src = imageList[(currentIndex + 2) % numImages];
-		  
+			
+			galleryPreview1.src = imageSrcs[(currentIndex + 0) % numImages];
+			galleryPreview2.src = imageSrcs[(currentIndex + 1) % numImages];
+			galleryPreview3.src = imageSrcs[(currentIndex + 2) % numImages];
 
-		  
-		  gallerySelected.src = imageList[currentIndex];
-		  gallerySelectedLink.href = imageLinkList[currentIndex];
-		  galleryTitle.textContent = imageTitles[currentIndex];
-		  galleryDate.textContent = imageDates[currentIndex];
-		  galleryDescription.textContent = imageDescriptions[currentIndex];
+
+			
+			gallerySelected.src = imageSrcs[currentIndex];
+			gallerySelectedLink.href = imageLinks[currentIndex];
+			galleryTitle.textContent = imageTitles[currentIndex];
+			galleryDate.textContent = imageDates[currentIndex];
+			galleryDescription.textContent = imageDescriptions[currentIndex];
 		}
 
-		
-		imageList.forEach(preloadImage);
-
-		
-		function preloadImage(imageSrc) {
-		  const img = new Image();
-		  img.src = imageSrc;
-		}
-
+		preloadImages();
 		updateGallery();
 	</script>
 </main>	</body>
