@@ -118,12 +118,14 @@
 			date: "(10\/03\/2021)"},  
 			];
 
-		const imageSrcs = imageList.map(image => image.src);
-		const imageLinks = imageList.map(image => image.link);
-		const imageTitles = imageList.map(image => image.title);
+		
+		const imagePreviews = imageList.map(image => image.src);
 		const imageThumbnails = imageList.map(image => image.thumbnail);
-		const imageDescriptions = imageList.map(image => image.description);
+		const imageLinks = imageList.map(image => image.link);
+
+		const imageTitles = imageList.map(image => image.title);
 		const imageDates = imageList.map(image => image.date);
+		const imageDescriptions = imageList.map(image => image.description);
 
 		
 		let currentIndex = 0;
@@ -139,8 +141,6 @@
 		const galleryTitle = document.getElementById("galleryTitle");
 		const galleryDescription = document.getElementById("galleryDescription");
 		const galleryDate = document.getElementById("galleryDate");
-
-		
 		const prevButton = document.getElementById("prev");
 		const nextButton = document.getElementById("next");
 
@@ -161,30 +161,34 @@
 		function preloadImages() {
 			for (let i = 0; i < numImages; i++) {
 				let imageObject = new Image();
-				imageObject.src = imageSrc[i];
+				imageObject.src = imagePreviews[i];
 				imageObject.src = imageThumbnails[i];
 				imageObjects.push(imageObject);
 			}
-		}
+		};
 
 		
 		function updateGallery() {
-			
-			galleryPreview1.src = imageThumbnails[(currentIndex + 0) % numImages];
-			galleryPreview2.src = imageThumbnails[(currentIndex + 1) % numImages];
-			galleryPreview3.src = imageThumbnails[(currentIndex + 2) % numImages];
+			for (let i = 0; i < 2; i++){
+				
+				galleryPreview1.src = imageThumbnails[(currentIndex + 0) % numImages];
+				galleryPreview2.src = imageThumbnails[(currentIndex + 1) % numImages];
+				galleryPreview3.src = imageThumbnails[(currentIndex + 2) % numImages];
 
+			}
 
 			
-			gallerySelected.src = imageSrcs[currentIndex];
+			gallerySelected.src = imagePreviews[currentIndex];
 			gallerySelectedLink.href = imageLinks[currentIndex];
 			galleryTitle.textContent = imageTitles[currentIndex];
 			galleryDate.textContent = imageDates[currentIndex];
 			galleryDescription.textContent = imageDescriptions[currentIndex];
-		}
-
+		};
+		
 		preloadImages();
 		updateGallery();
+		});
+
 	</script>
 </main>	</body>
 </html>
