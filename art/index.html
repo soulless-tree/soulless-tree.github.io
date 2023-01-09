@@ -33,16 +33,16 @@
 	</header>
 
 	<div class="gallery">
-	<div class="gallery-selected">
-		<a id="gallerySelectedLink" href="" target="_blank">
-		<img id="gallerySelected" src="">
-		</a>
-	</div>
-	<div class="gallery-title">
-		<p id="galleryTitle"></p>
-		<p id="galleryDate"></p>
-		<em id="galleryDescription"></em>
-	</div>
+		<div class="gallery-selected">
+			<a id="gallerySelectedLink" href="" target="_blank">
+				<img id="gallerySelected" src="">
+			</a>
+		</div>
+		<div class="gallery-title">
+			<p id="galleryTitle"></p>
+			<p id="galleryDate"></p>
+			<em id="galleryDescription"></em>
+		</div>
 	</div>
 
 	<div class="gallery-preview">
@@ -56,54 +56,63 @@
 		const imageList = [
 			{src: "\/art\/landscape-1.webp",    
 			link: "\/art\/landscape-1.jpg",    
+			thumbnail: "\/art\/thumbnail-landscape-1.webp",    
 			title: "Landscape #1",    
 			description: "« First attempt at drawing landscapes. »",    
 			date: "(03\/09\/2022)"},  
 			
 			{src: "\/art\/untitled-portrait-2.webp",    
 			link: "\/art\/untitled-portrait-2.png",    
+			thumbnail: "\/art\/thumbnail-untitled-portrait-2.webp",    
 			title: "Untitled Portrait #2",    
 			description: "« Portrait study. »",    
 			date: "(15\/06\/2022)"},  
 			
 			{src: "\/art\/rasputin.webp",    
 			link: "\/art\/rasputin.png",    
+			thumbnail: "\/art\/thumbnail-rasputin.webp",    
 			title: "Rasputin",    
 			description: "« Portrait study. »",    
 			date: "(09\/06\/2022)"},  
 			
 			{src: "\/art\/new-brushes.webp",    
 			link: "\/art\/new-brushes.jpg",    
+			thumbnail: "\/art\/thumbnail-new-brushes.webp",    
 			title: "New Brushes",    
 			description: "« Study. »",    
 			date: "(03\/06\/2022)"},  
 			
 			{src: "\/art\/untitled-portrait-1.webp",    
 			link: "\/art\/untitled-portrait-1.png",    
+			thumbnail: "\/art\/thumbnail-untitled-portrait-1.webp",    
 			title: "Untitled Portrait #1",    
 			description: "« Portrait study. »",    
 			date: "(20\/04\/2022)"},  
 			
 			{src: "\/art\/in-red.webp",    
 			link: "\/art\/in-red.png",    
+			thumbnail: "\/art\/thumbnail-in-red.webp",    
 			title: "In Red",    
 			description: "« Lilium on repeat. »",    
 			date: "(13\/01\/2022)"},  
 			
 			{src: "\/art\/link.webp",    
 			link: "\/art\/link.png",    
+			thumbnail: "\/art\/thumbnail-link.webp",    
 			title: "Link",    
 			description: "« From BOTW. »",    
 			date: "(07\/12\/2021)"},  
 			
 			{src: "\/art\/her.webp",    
 			link: "\/art\/her.png",    
+			thumbnail: "\/art\/thumbnail-her.webp",    
 			title: "Her",    
 			description: "« ... »",    
 			date: "(30\/11\/2021)"},  
 			
 			{src: "\/art\/return-to-tradition.webp",    
 			link: "\/art\/return-to-tradition.png",    
+			thumbnail: "\/art\/thumbnail-return-to-tradition.webp",    
 			title: "Return to Tradition",    
 			description: "« . »",    
 			date: "(10\/03\/2021)"},  
@@ -112,6 +121,7 @@
 		const imageSrcs = imageList.map(image => image.src);
 		const imageLinks = imageList.map(image => image.link);
 		const imageTitles = imageList.map(image => image.title);
+		const imageThumbnails = imageList.map(image => image.thumbnail);
 		const imageDescriptions = imageList.map(image => image.description);
 		const imageDates = imageList.map(image => image.date);
 
@@ -151,7 +161,7 @@
 		function preloadImages() {
 			for (let i = 0; i < numImages; i++) {
 				let imageObject = new Image();
-				imageObject.src = imageSrcs[i];
+				imageObject.src = imageThumbnails[i];
 				imageObjects.push(imageObject);
 			}
 		}
@@ -159,9 +169,9 @@
 		
 		function updateGallery() {
 			
-			galleryPreview1.src = imageSrcs[(currentIndex + 0) % numImages];
-			galleryPreview2.src = imageSrcs[(currentIndex + 1) % numImages];
-			galleryPreview3.src = imageSrcs[(currentIndex + 2) % numImages];
+			galleryPreview1.src = imageThumbnails[(currentIndex + 0) % numImages];
+			galleryPreview2.src = imageThumbnails[(currentIndex + 1) % numImages];
+			galleryPreview3.src = imageThumbnails[(currentIndex + 2) % numImages];
 
 
 			
