@@ -161,6 +161,7 @@
 		function preloadImages() {
 			for (let i = 0; i < numImages; i++) {
 				let imageObject = new Image();
+				imageObject.src = imageSrc[i];
 				imageObject.src = imageThumbnails[i];
 				imageObjects.push(imageObject);
 			}
