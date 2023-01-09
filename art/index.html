@@ -169,20 +169,19 @@
 
 		
 		function updateGallery() {
-			for (let i = 0; i < 2; i++){
-				
-				galleryPreview1.src = imageThumbnails[(currentIndex + 0) % numImages];
-				galleryPreview2.src = imageThumbnails[(currentIndex + 1) % numImages];
-				galleryPreview3.src = imageThumbnails[(currentIndex + 2) % numImages];
-
-			}
-
 			
 			gallerySelected.src = imagePreviews[currentIndex];
 			gallerySelectedLink.href = imageLinks[currentIndex];
 			galleryTitle.textContent = imageTitles[currentIndex];
 			galleryDate.textContent = imageDates[currentIndex];
 			galleryDescription.textContent = imageDescriptions[currentIndex];
+
+			for (let i = 0; i < 2; i++){
+				
+				galleryPreview1.src = imageThumbnails[(currentIndex + 0) % numImages];
+				galleryPreview2.src = imageThumbnails[(currentIndex + 1) % numImages];
+				galleryPreview3.src = imageThumbnails[(currentIndex + 2) % numImages];
+			}
 		};
 		
 		preloadImages();
