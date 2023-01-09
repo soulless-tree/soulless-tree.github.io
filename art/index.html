@@ -162,8 +162,10 @@
 			for (let i = 0; i < numImages; i++) {
 				let imageObject = new Image();
 				imageObject.src = imagePreviews[i];
-				imageObject.src = imageThumbnails[i];
 				imageObjects.push(imageObject);
+		                let imageObjectThumb = new Image();
+               			imageObjectThumb.src = imageThumbnails[i];
+		                imageObjects.push(imageObjectThumb);
 			}
 		};
 
