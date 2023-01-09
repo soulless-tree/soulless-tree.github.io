@@ -36,6 +36,7 @@
 		<div class="gallery-selected">
 			<a id="gallerySelectedLink" href="" target="_blank">
 				<img id="gallerySelected" src="">
+
 			</a>
 		</div>
 		<div class="gallery-title">
@@ -49,7 +50,10 @@
 		<img id="galleryPreview1" src="">
 		<img id="galleryPreview2" src="">
 		<img id="galleryPreview3" src="">
+	
 	</div>
+	<img id="galleryPreviewHidden" style="display:none" src="">
+	<img id="galleryHidden" style="display:none" src="">
 
 	<script>
 		
@@ -117,8 +121,6 @@
 			description: "« . »",    
 			date: "(10\/03\/2021)"},  
 			];
-
-		
 		const imagePreviews = imageList.map(image => image.src);
 		const imageThumbnails = imageList.map(image => image.thumbnail);
 		const imageLinks = imageList.map(image => image.link);
@@ -136,7 +138,9 @@
 		const galleryPreview1 = document.getElementById("galleryPreview1");
 		const galleryPreview2 = document.getElementById("galleryPreview2");
 		const galleryPreview3 = document.getElementById("galleryPreview3");
+		const galleryPreviewHidden = document.getElementById("galleryPreviewHidden");
 		const gallerySelected = document.getElementById("gallerySelected");
+		const galleryHidden = document.getElementById("galleryHidden");
 		const gallerySelectedLink = document.getElementById("gallerySelectedLink");
 		const galleryTitle = document.getElementById("galleryTitle");
 		const galleryDescription = document.getElementById("galleryDescription");
@@ -158,36 +162,23 @@
 		});
 
 		
-		function preloadImages() {
-			for (let i = 0; i < numImages; i++) {
-				let imageObject = new Image();
-				imageObject.src = imagePreviews[i];
-				imageObjects.push(imageObject);
-		                let imageObjectThumb = new Image();
-               			imageObjectThumb.src = imageThumbnails[i];
-		                imageObjects.push(imageObjectThumb);
-			}
-		};
-
-		
 		function updateGallery() {
 			
 			gallerySelected.src = imagePreviews[currentIndex];
 			gallerySelectedLink.href = imageLinks[currentIndex];
+			galleryHidden.src = imagePreviews[(currentIndex + 1) % numImages];
 			galleryTitle.textContent = imageTitles[currentIndex];
 			galleryDate.textContent = imageDates[currentIndex];
 			galleryDescription.textContent = imageDescriptions[currentIndex];
-
-			for (let i = 0; i < 2; i++){
 				
-				galleryPreview1.src = imageThumbnails[(currentIndex + 0) % numImages];
-				galleryPreview2.src = imageThumbnails[(currentIndex + 1) % numImages];
-				galleryPreview3.src = imageThumbnails[(currentIndex + 2) % numImages];
-			}
+			galleryPreview1.src = imageThumbnails[currentIndex];
+			galleryPreview2.src = imageThumbnails[(currentIndex + 1) % numImages];
+			galleryPreview3.src = imageThumbnails[(currentIndex + 2) % numImages];
+			galleryPreviewHidden.src = imageThumbnails[(currentIndex + 3) % numImages];
 		};
 		
-		preloadImages();
 		updateGallery();
+
 
 	</script>
 </main>	</body>
