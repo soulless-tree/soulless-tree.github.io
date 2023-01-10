@@ -27,8 +27,8 @@
 		<h1 id="tag_Art">Art</h1> 
 		<em>« Pattern recognition in reverse. »</em>
 		<p>
-		<button id="prev">⬅️</button>
-		<button id="next">➡️</button>
+		<button id="gallery-prev">⬅️</button>
+		<button id="gallery-next">➡️</button>
 		</p>
 	</header>
 
@@ -119,9 +119,9 @@
 			];
 
 		
-		const imagePreviews = imageList.map(image => image.src);
+		const imageLowRes = imageList.map(image => image.src);
+		const imageFullRes = imageList.map(image => image.link);
 		const imageThumbnails = imageList.map(image => image.thumbnail);
-		const imageLinks = imageList.map(image => image.link);
 
 		const imageTitles = imageList.map(image => image.title);
 		const imageDates = imageList.map(image => image.date);
@@ -133,25 +133,28 @@
 		const numImages = imageList.length;
 
 		
-		const galleryThumbnail1 = document.getElementById("galleryThumbnail1");
-		const galleryThumbnail2 = document.getElementById("galleryThumbnail2");
-		const galleryThumbnail3 = document.getElementById("galleryThumbnail3");
+		const galleryPrevButton = document.getElementById("gallery-prev");
+		const galleryNextButton = document.getElementById("gallery-next");
+
 		const gallerySelected = document.getElementById("gallerySelected");
 		const gallerySelectedLink = document.getElementById("gallerySelectedLink");
+
 		const galleryTitle = document.getElementById("galleryTitle");
 		const galleryDescription = document.getElementById("galleryDescription");
 		const galleryDate = document.getElementById("galleryDate");
-		const prevButton = document.getElementById("prev");
-		const nextButton = document.getElementById("next");
+
+		const galleryThumbnail1 = document.getElementById("galleryThumbnail1");
+		const galleryThumbnail2 = document.getElementById("galleryThumbnail2");
+		const galleryThumbnail3 = document.getElementById("galleryThumbnail3");
 
 		
-		prevButton.addEventListener("click", () => {
+		galleryPrevButton.addEventListener("click", () => {
 			
 			currentIndex = (currentIndex - 1 + numImages) % numImages;
 			updateGallery();
 		});
 
-		nextButton.addEventListener("click", () => {
+		galleryNextButton.addEventListener("click", () => {
 			
 			currentIndex = (currentIndex + 1 + numImages) % numImages;
 			updateGallery();
@@ -161,7 +164,7 @@
 		function preloadImages() {
 			for (let i = 0; i < numImages; i++) {
 				let imageObject = new Image();
-				imageObject.src = imagePreviews[i];
+				imageObject.src = imageLowRes[i];
 				imageObjects.push(imageObject);
 		                let imageObjectThumb = new Image();
                			imageObjectThumb.src = imageThumbnails[i];
@@ -169,17 +172,17 @@
 			}
 		};
 
+		
 		function changeImage(imgObj, newLink) {
 		    imgObj.src = "";
 		    imgObj.src = newLink;
 		}
         
-
 		
 		function updateGallery() {
 			
-			changeImage(gallerySelected, imagePreviews[currentIndex]);
-			gallerySelectedLink.href = imageLinks[currentIndex];
+			changeImage(gallerySelected, imageLowRes[currentIndex]);
+			gallerySelectedLink.href = imageFullRes[currentIndex];
 			galleryTitle.textContent = imageTitles[currentIndex];
 			galleryDate.textContent = imageDates[currentIndex];
 			galleryDescription.textContent = imageDescriptions[currentIndex];
@@ -192,7 +195,6 @@
 		
 		preloadImages();
 		updateGallery();
-
 	</script>
 </main>	</body>
 </html>
