@@ -128,11 +128,6 @@
 		const imageDescriptions = imageList.map(image => image.description);
 
 		
-		let currentIndex = 0;
-		let imageObjects = [];
-		const numImages = imageList.length;
-
-		
 		const galleryPrevButton = document.getElementById("gallery-prev");
 		const galleryNextButton = document.getElementById("gallery-next");
 
@@ -146,6 +141,10 @@
 		const galleryThumbnail1 = document.getElementById("galleryThumbnail1");
 		const galleryThumbnail2 = document.getElementById("galleryThumbnail2");
 		const galleryThumbnail3 = document.getElementById("galleryThumbnail3");
+
+		
+		const numImages = imageList.length;
+		let currentIndex = numImages - 1;
 
 		
 		galleryPrevButton.addEventListener("click", () => {
@@ -162,13 +161,14 @@
 
 		
 		function preloadImages() {
+			let imageObjects = [];
 			for (let i = 0; i < numImages; i++) {
-				let imageObject = new Image();
-				imageObject.src = imageLowRes[i];
-				imageObjects.push(imageObject);
-		                let imageObjectThumb = new Image();
-               			imageObjectThumb.src = imageThumbnails[i];
-		                imageObjects.push(imageObjectThumb);
+				let imageObjectLowRes = new Image();
+				imageObjectLowRes.src = imageLowRes[i];
+				imageObjects.push(imageObjectLowRes);
+		                let imageObjectThumbnails = new Image();
+               			imageObjectThumbnails.src = imageThumbnails[i];
+		                imageObjects.push(imageObjectThumbnails);
 			}
 		};
 
@@ -181,11 +181,11 @@
 		
 		function updateGallery() {
 			
-			changeImage(gallerySelected, imageLowRes[currentIndex]);
-			gallerySelectedLink.href = imageFullRes[currentIndex];
-			galleryTitle.textContent = imageTitles[currentIndex];
-			galleryDate.textContent = imageDates[currentIndex];
-			galleryDescription.textContent = imageDescriptions[currentIndex];
+			changeImage(gallerySelected, imageLowRes[(currentIndex + 1) % numImages]);
+			gallerySelectedLink.href = imageFullRes[(currentIndex + 1) % numImages];
+			galleryTitle.textContent = imageTitles[(currentIndex + 1) % numImages];
+			galleryDate.textContent = imageDates[(currentIndex + 1) % numImages];
+			galleryDescription.textContent = imageDescriptions[(currentIndex + 1) % numImages];
 
 			
 			changeImage(galleryThumbnail1, imageThumbnails[(currentIndex + 0) % numImages]);
