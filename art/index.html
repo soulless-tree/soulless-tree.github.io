@@ -38,17 +38,17 @@
 				<img id="gallerySelected" src="">
 			</a>
 		</div>
-		<div class="gallery-title">
+		<div class="gallery-info">
 			<p id="galleryTitle"></p>
 			<p id="galleryDate"></p>
 			<em id="galleryDescription"></em>
 		</div>
 	</div>
 
-	<div class="gallery-preview">
-		<img id="galleryPreview1" src="">
-		<img id="galleryPreview2" src="">
-		<img id="galleryPreview3" src="">
+	<div class="gallery-thumbnails">
+		<img id="galleryThumbnail1" src="">
+		<img id="galleryThumbnail2" src="">
+		<img id="galleryThumbnail3" src="">
 	</div>
 
 	<script>
@@ -133,9 +133,9 @@
 		const numImages = imageList.length;
 
 		
-		const galleryPreview1 = document.getElementById("galleryPreview1");
-		const galleryPreview2 = document.getElementById("galleryPreview2");
-		const galleryPreview3 = document.getElementById("galleryPreview3");
+		const galleryThumbnail1 = document.getElementById("galleryThumbnail1");
+		const galleryThumbnail2 = document.getElementById("galleryThumbnail2");
+		const galleryThumbnail3 = document.getElementById("galleryThumbnail3");
 		const gallerySelected = document.getElementById("gallerySelected");
 		const gallerySelectedLink = document.getElementById("gallerySelectedLink");
 		const galleryTitle = document.getElementById("galleryTitle");
@@ -169,20 +169,25 @@
 			}
 		};
 
+		function changeImage(imgObj, newLink) {
+		    imgObj.src = "";
+		    imgObj.src = newLink;
+		}
+        
+
 		
 		function updateGallery() {
 			
-			gallerySelected.src = "";
-			gallerySelected.src = imagePreviews[currentIndex];
+			changeImage(gallerySelected, imagePreviews[currentIndex]);
 			gallerySelectedLink.href = imageLinks[currentIndex];
 			galleryTitle.textContent = imageTitles[currentIndex];
 			galleryDate.textContent = imageDates[currentIndex];
 			galleryDescription.textContent = imageDescriptions[currentIndex];
 
 			
-			galleryPreview1.src = imageThumbnails[(currentIndex + 0) % numImages];
-			galleryPreview2.src = imageThumbnails[(currentIndex + 1) % numImages];
-			galleryPreview3.src = imageThumbnails[(currentIndex + 2) % numImages];
+			changeImage(galleryThumbnail1, imageThumbnails[(currentIndex + 0) % numImages]);
+			changeImage(galleryThumbnail2, imageThumbnails[(currentIndex + 1) % numImages]);
+			changeImage(galleryThumbnail3, imageThumbnails[(currentIndex + 2) % numImages]);
 		};
 		
 		preloadImages();
