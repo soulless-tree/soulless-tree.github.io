@@ -35,7 +35,7 @@ Fusce non dictum sapien, sed scelerisque turpis. Donec egestas lacus eget mi tri
 &lt;div&gt;
 &lt;h1 id=&#34;ii&#34;&gt;II&lt;/h1&gt;
 &lt;p&gt;Vestibulum velit tortor, bibendum non nulla ut, feugiat gravida nunc. Donec eu nunc nec nisi pellentesque convallis. Phasellus id ligula quis nulla faucibus dignissim. Suspendisse sed elit eget leo pretium consequat. Proin tincidunt, eros vitae accumsan tristique, dui ligula vehicula nisl, ut gravida tortor est vehicula est. In quis elit et eros ultrices laoreet vel non quam. Vivamus fermentum consectetur nisi, id blandit metus. Vestibulum risus nisi, ullamcorper quis iaculis quis, vulputate eu nisl. Morbi iaculis vulputate odio. Aliquam tempus, arcu sit amet sagittis euismod, eros enim consequat eros, aliquam luctus tortor augue eu dui. Praesent id libero semper, rhoncus felis eu, ultricies turpis. Etiam lobortis erat at felis rutrum, sed faucibus risus dignissim. Etiam at consequat dolor. Sed dictum euismod dictum.&lt;/p&gt;
-&lt;pre&gt;          |
+&lt;pre class=&#34;ascii-art-unicode&#34;&gt;          |
         \ _ /
       -= (_) =-
         /   \         _\/_
@@ -46,7 +46,7 @@ Fusce non dictum sapien, sed scelerisque turpis. Donec egestas lacus eget mi tri
 &lt;p style=&#34;text-indent:initial;&#34;&gt;Donec rhoncus pulvinar arcu nec feugiat. Aenean sit amet risus at ex volutpat consequat. Ut eu nibh orci. Etiam sed nulla viverra, tincidunt nisl sed, semper sapien. Proin hendrerit nulla vitae egestas placerat. In vitae lobortis est. Fusce ut commodo nibh. Pellentesque cursus condimentum fringilla.Praesent gravida augue at nulla tempor, ut hendrerit leo tincidunt. Sed dolor nibh, hendrerit eget elit pretium, condimentum facilisis ipsum. Aenean elit leo, ultricies viverra turpis ut, suscipit congue eros. Duis ultrices ex in est elementum pulvinar. Aliquam vel orci molestie, ultricies ex vitae, luctus metus. Integer rhoncus ante massa, sed malesuada nunc consectetur ut. Donec ultrices consectetur justo, ut porttitor massa eleifend eget. Duis vulputate lectus justo, quis posuere urna consequat eu.&lt;/p&gt;
 &lt;p&gt;Phasellus mauris sem, egestas sed viverra a, rhoncus et turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla porttitor, orci vel elementum gravida, enim risus consequat tortor, id aliquet massa risus ac purus. Pellentesque malesuada, libero a vestibulum molestie, metus diam aliquam nibh, convallis hendrerit tortor diam hendrerit tellus. Nam tincidunt mauris lorem, ac congue turpis cursus eget. Pellentesque ligula risus, ultrices non urna sit amet, tristique faucibus nunc. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas a purus ut nibh viverra fermentum vitae ac nunc. Phasellus ac lorem cursus, vestibulum augue a, mollis dui. Morbi quis justo sed est lacinia hendrerit sed non magna. Nulla massa orci, scelerisque et ipsum quis, suscipit dictum dolor. Donec quis augue finibus, ornare leo non, tempus nunc.&lt;/p&gt;
 &lt;figure&gt;
-&lt;pre class=&#34;ascii-art&#34;&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠄⠀⠁⠀⠀⠑⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+&lt;pre class=&#34;ascii-art-braille&#34;&gt;⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠄⠀⠁⠀⠀⠑⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⠀⠀⠀⠀⠀⠀⠀⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠊⠁⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⠄⠤⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀

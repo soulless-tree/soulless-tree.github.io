@@ -216,7 +216,13 @@ dd{text-align: justify;}
 	padding-bottom: 56.25%;
 }
 
-.ascii-art{
+.ascii-art-unicode{
+	display: inline-block;
+	text-align: left;
+	margin: 16px auto;
+}
+
+.ascii-art-braille{
 	border: solid;
 	border-color: gray;
 	border-width: 2px;
@@ -234,10 +240,10 @@ dd{text-align: justify;}
 		--body-width: auto;
 		margin: 16px;
 	}
-	pre{
+	.ascii-art-unicode{
 		font-size: 2vw;
 	}
-	.ascii-art{
+	.ascii-art-braille{
 		font-size: 2vw;
 	}
 }
