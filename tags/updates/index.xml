@@ -27,7 +27,7 @@ url = &#39;/&#39;
 name = &#39;About&#39;
 url = &#39;/about&#39;
 &lt;/pre&gt; 
-&lt;p&gt;The second reason was that I couldn&amp;rsquo;t mantain the highlighting of the selected menu item within section&amp;rsquo;s posts, but &lt;a href=&#34;https://discourse.gohugo.io/t/another-way-to-make-a-menu-item-active/17029&#34; target=&#34;_blank&#34; title=&#34;Another way to make a menu item active&#34;&gt;luckily I found a solution&lt;/a&gt;. And now that everything is working properly I can finally look foward to implement some kind of interactive gallery to the Art section (maybe this is the time to learn JavaScript).&lt;/p&gt;
+&lt;p&gt;The second reason was that I couldn&amp;rsquo;t mantain the highlighting of the selected menu item within section posts, but &lt;a href=&#34;https://discourse.gohugo.io/t/another-way-to-make-a-menu-item-active/17029&#34; target=&#34;_blank&#34; title=&#34;Another way to make a menu item active&#34;&gt;luckily I found a solution&lt;/a&gt;. And now that everything is working properly I can finally look foward to implement some kind of interactive gallery to the Art section (maybe this is the time to learn JavaScript).&lt;/p&gt;
 </description>
 		</item>
 		
