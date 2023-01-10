@@ -31,7 +31,18 @@
 	</header>
 
 	<article>
-		<p>It took some time, but after the release of this really helpful <a href="https://www.youtube.com/watch?v=ZFL09qhKi5I" target="_blank" title="Hugo Actually Explained (Websites, Themes, Layouts, and Intro to Scripting)">Luke Smith&rsquo;s tutorial on Hugo</a> I was finally able to port my old site to this framework. I must say that, although most of the process was an easy rewriting of what I already had, the seemingly simple navigation bar was by far the most laborious thing to make. First, because I had to find out how to add non-section pages to the &ldquo;section menu for lazy bloggers,&rdquo; which later I realized had to be added manually in the config file. And second, because I wasn&rsquo;t able to keep the highlighting of the selected menu item within section&rsquo;s posts <a href="https://discourse.gohugo.io/t/another-way-to-make-a-menu-item-active/17029" target="_blank" title="Another way to make a menu item active">(luckily I found a solution)</a>. But now that everything is working properly I can finally look foward to implement some kind of interactive gallery to the Art section (maybe this is the time to learn JavaScript).</p>
+		<p>It took some time, but after the release of this really helpful <a href="https://www.youtube.com/watch?v=ZFL09qhKi5I" target="_blank" title="Hugo Actually Explained (Websites, Themes, Layouts, and Intro to Scripting)">Luke Smith&rsquo;s tutorial on Hugo</a> I was finally able to port my old site to this framework. I must say that, although most of the process was an easy rewriting of what I already had, the seemingly simple navigation bar was by far the most laborious thing to make. First, because I had to figure out how to add non-section Markdown files (the Home and About sections) to the Section Menu for Lazy Bloggers, which later I learned had to be added manually in the config file as follows:</p>
+<pre>
+[menu]
+[[menu.main]]
+name = 'Home'
+url = '/'
+
+[[menu.main]]
+name = 'About'
+url = '/about'
+</pre> 
+<p>The second reason was that I couldn&rsquo;t mantain the highlighting of the selected menu item within section&rsquo;s posts, but <a href="https://discourse.gohugo.io/t/another-way-to-make-a-menu-item-active/17029" target="_blank" title="Another way to make a menu item active">luckily I found a solution</a>. And now that everything is working properly I can finally look foward to implement some kind of interactive gallery to the Art section (maybe this is the time to learn JavaScript).</p>
 
 		<p>Tags: 
 		<a target="_blank" href='/tags/updates'>updates</a>.</p>	
